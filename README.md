@@ -22,25 +22,63 @@ This project provides a complete workflow to:
 - Python 3.7 or higher
 - Required Python packages listed in `requirements.txt`
 
+---
+
 ### Installation
 
-1. Clone this repository:
+```bash
+git clone https://github.com/karnegre/slf-classifier.git
+cd slf-classifier
+pip install -r requirements.txt
+```
 
-   ```bash
-   git clone https://github.com/karnegre/slf-classifier.git
-   cd slf-classifier
+---
 
-### Usage
-1. Feature extraction
-   run feature extraction script
-	python src/massfeatureextract.py
-   it will pull images from the severson and dtd folders
-   extracted features will be saved into the data folder with the current date. 
+## Usage
 
-2. Model training and evaluation
-   make sure data.xlsx has been copied and pasted to include all egg and non egg texture features
-   run classifier script
-	python src/classifier.py
-   script will load and process data, train an SVM classifier with hypertuning, save the best model and evaluation plots to output
+### 1. Feature Extraction
+
+Place your image sets inside the `image_sets/` directory under subfolders (e.g., `severson/`, `dtd/`).
+
+Run the feature extraction script:
+
+```bash
+python src/massfeatureextract.py
+```
+
+- The script will extract texture features from all images in the folders.
+- Features are saved as an Excel file in the `data/` directory with the current date in the filename.
+
+**Non-egg images are sourced from:**
+
+- Severstal Steel Defect Detection Dataset:  
+  https://www.kaggle.com/competitions/severstal-steel-defect-detection/overview
+- Describable Textures Dataset (DTD):  
+  https://www.robots.ox.ac.uk/~vgg/data/dtd/index.html#citation
+
+---
+
+### 2. Model Training and Evaluation
+
+Ensure your `.xlsx` file (with both egg and non-egg features) is saved in the `data/` directory.
+
+Run the classification pipeline:
+
+```bash
+python src/classifier.py
+```
+
+This script will:
+
+- Load and preprocess the feature data
+- Train an SVM classifier with hyperparameter tuning
+- Save the best model to `models/final_model.pkl`
+- Generate and save evaluation plots (ROC, PR curves, confusion matrix, PCA, etc.) to the `outputs/` directory
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 

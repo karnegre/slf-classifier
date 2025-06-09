@@ -59,6 +59,7 @@ if __name__ == "__main__":
     today = date.today().isoformat()
     dtd_path = './image_sets/dtd'
     svs_path = './image_sets/severstal'
+    eggs_root_path = './image_sets/eggs'
 
     all_data = pd.DataFrame()
 
@@ -66,6 +67,8 @@ if __name__ == "__main__":
         all_data = pd.concat([all_data, process_texture_dataset(dtd_path, "dtd")])
     if os.path.exists(svs_path):
         all_data = pd.concat([all_data, process_texture_dataset(svs_path, "severstal")])
+    if os.path.exists(eggs_root_path):
+        all_data = pd.concat([all_data, process_texture_dataset(eggs_root_path, "egg")])
 
     os.makedirs("data", exist_ok=True)
     outname = os.path.join("data", f"{today}_texture_features_severstal.xlsx")
