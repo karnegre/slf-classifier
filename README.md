@@ -1,17 +1,24 @@
 # SLF Classifier
 
-A machine learning pipeline for classifying spotted lanternfly egg mass images using texture-based features with Support Vector Machine (SVM) modeling.
+This repository supports our publication on automated classification of spotted lanternfly egg masses using texture-based features and Support Vector Machine (SVM) modeling.
 
 ---
 
 ## Overview
 
-This project provides a complete workflow to:
+This project delivers:
 
-- Extract multiple texture descriptors from grayscale images, including GLCM, GLDS, LBP, Zernike moments, Hu moments, and TAS.
-- Perform feature selection and dimensionality reduction.
-- Train an optimized SVM classifier with hyperparameter tuning.
-- Evaluate and visualize model performance with comprehensive plots.
+- Extraction of multiple complementary texture descriptors (GLCM, GLDS, LBP, Hu moments, Zernike moments, TAS) from grayscale images.
+- Feature selection and dimensionality reduction to identify a minimal, interpretable set.
+- An optimized SVM classifier trained with hyperparameter tuning.
+- Comprehensive evaluation and visualization of model performance.
+
+In line with our paper, we provide:
+
+- A publicly accessible dataset of over 300 annotated egg mass images, with segmentation masks generated via the Fiji Labkit plugin.
+- Corresponding computed texture features supporting reproducibility and further research.
+
+Egg images and segmentation masks are available in the `image_sets/eggs/` directory. Extracted features can be found in the `data/` folder.
 
 ---
 
@@ -20,9 +27,7 @@ This project provides a complete workflow to:
 ### Prerequisites
 
 - Python 3.7 or higher
-- Required Python packages listed in `requirements.txt`
-
----
+- Dependencies listed in `requirements.txt`
 
 ### Installation
 
@@ -30,9 +35,7 @@ This project provides a complete workflow to:
 git clone https://github.com/karnegre/slf-classifier.git
 cd slf-classifier
 pip install -r requirements.txt
-```
 
----
 
 ## Usage
 
