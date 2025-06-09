@@ -35,6 +35,7 @@ Egg images and segmentation masks are available in the `image_sets/eggs/` direct
 git clone https://github.com/karnegre/slf-classifier.git
 cd slf-classifier
 pip install -r requirements.txt
+```
 
 
 ## Usage
