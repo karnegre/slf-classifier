@@ -1,0 +1,2 @@
+https://www.kaggle.com/competitions/severstal-steel-defect-detection/overview
+https://www.robots.ox.ac.uk/~vgg/data/dtd/index.html#citation
