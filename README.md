@@ -31,16 +31,40 @@ This project provides a complete workflow to:
    cd slf-classifier
 
 ### Usage
-1. Feature extraction
-   run feature extraction script
-	python src/massfeatureextract.py
-   it will pull images from the severson and dtd folders
-   extracted features will be saved into the data folder with the current date. 
+1. Feature Extraction
+Place your image sets inside the image_sets/ directory under subfolders (e.g., severson/, dtd/).
 
-2. Model training and evaluation
-   make sure data.xlsx has been copied and pasted to include all egg and non egg texture features
-   run classifier script
-	python src/classifier.py
-   script will load and process data, train an SVM classifier with hypertuning, save the best model and evaluation plots to output
+Run the feature extraction script:
+
+bash
+Copy
+Edit
+python src/massfeatureextract.py
+The script will extract texture features from all images in the folders and save the output as an Excel file in the data/ directory, named with the current date.
+
+Non-egg images are sourced from:
+
+Severstal Steel Defect Detection Dataset
+
+Describable Textures Dataset (DTD)
+
+2. Model Training and Evaluation
+Ensure your consolidated .xlsx file (containing both egg and non-egg features) is saved in the data/ directory.
+
+Run the classification pipeline:
+
+bash
+Copy
+Edit
+python src/classifier.py
+This script will:
+
+Load and preprocess the data
+
+Train an SVM classifier with hyperparameter tuning
+
+Save the best model to models/final_model.pkl
+
+Generate evaluation plots (e.g., ROC curves, precision-recall curves, confusion matrix, PCA visualization) and save them in the outputs/ directory
 
 
