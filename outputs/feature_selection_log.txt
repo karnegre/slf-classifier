@@ -1,0 +1,137 @@
+=== Feature Selection Log ===
+
+Timestamp: 2025-06-25 12:48:19
+Total input features: 125
+
+Pearson Correlation Threshold: 0.65
+
+Dropped due to correlation (110 features):
+  - GLCM_SumOfSquaresVariance_Mean
+  - GLCM_InverseDifferenceMoment_Mean
+  - GLCM_SumVariance_Mean
+  - GLCM_SumEntropy_Mean
+  - GLCM_Entropy_Mean
+  - GLCM_DifferenceVariance_Mean
+  - GLCM_DifferenceEntropy_Mean
+  - GLCM_Information1_Mean
+  - GLCM_Information2_Mean
+  - GLCM_MaximalCorrelationCoefficient_Mean
+  - GLCM_ASM_Range
+  - GLCM_Contrast_Range
+  - GLCM_Correlation_Range
+  - GLCM_SumAverage_Range
+  - GLCM_SumVariance_Range
+  - GLCM_SumEntropy_Range
+  - GLCM_Entropy_Range
+  - GLCM_DifferenceVariance_Range
+  - GLCM_DifferenceEntropy_Range
+  - GLCM_Information1_Range
+  - GLCM_Information2_Range
+  - GLDS_Homogeneity
+  - GLDS_ASM
+  - GLDS_Entopy
+  - GLDS_Mean
+  - LBP_R_1_P_8_entropy
+  - LBP_R_2_P_16_energy
+  - LBP_R_2_P_16_entropy
+  - LBP_R_3_P_24_energy
+  - LBP_R_3_P_24_entropy
+  - Zernikes_Moments_radius_9_2
+  - Zernikes_Moments_radius_9_3
+  - Zernikes_Moments_radius_9_4
+  - Zernikes_Moments_radius_9_5
+  - Zernikes_Moments_radius_9_6
+  - Zernikes_Moments_radius_9_7
+  - Zernikes_Moments_radius_9_8
+  - Zernikes_Moments_radius_9_9
+  - Zernikes_Moments_radius_9_10
+  - Zernikes_Moments_radius_9_11
+  - Zernikes_Moments_radius_9_12
+  - Zernikes_Moments_radius_9_13
+  - Zernikes_Moments_radius_9_14
+  - Zernikes_Moments_radius_9_15
+  - Zernikes_Moments_radius_9_16
+  - Zernikes_Moments_radius_9_17
+  - Zernikes_Moments_radius_9_18
+  - Zernikes_Moments_radius_9_19
+  - Zernikes_Moments_radius_9_20
+  - Zernikes_Moments_radius_9_21
+  - Zernikes_Moments_radius_9_22
+  - Zernikes_Moments_radius_9_23
+  - Zernikes_Moments_radius_9_24
+  - Hu_Moment_1
+  - Hu_Moment_2
+  - Hu_Moment_3
+  - Hu_Moment_4
+  - Hu_Moment_5
+  - Hu_Moment_6
+  - TAS0
+  - TAS1
+  - TAS2
+  - TAS3
+  - TAS4
+  - TAS5
+  - TAS7
+  - TAS8
+  - TAS9
+  - TAS10
+  - TAS11
+  - TAS12
+  - TAS13
+  - TAS14
+  - TAS15
+  - TAS16
+  - TAS17
+  - TAS18
+  - TAS19
+  - TAS20
+  - TAS21
+  - TAS22
+  - TAS23
+  - TAS24
+  - TAS25
+  - TAS26
+  - TAS27
+  - TAS29
+  - TAS31
+  - TAS32
+  - TAS33
+  - TAS34
+  - TAS35
+  - TAS36
+  - TAS37
+  - TAS38
+  - TAS39
+  - TAS40
+  - TAS41
+  - TAS42
+  - TAS43
+  - TAS44
+  - TAS45
+  - TAS46
+  - TAS47
+  - TAS48
+  - TAS49
+  - TAS50
+  - TAS51
+  - TAS52
+  - TAS53
+
+Remaining after correlation: 15 features
+
+KBest selected (13 features):
+  - GLCM_Contrast_Mean (F-score: 1.1489, p-value: 2.8391e-01)
+  - GLCM_Correlation_Mean (F-score: 24.6260, p-value: 7.5648e-07)
+  - GLCM_SumOfSquaresVariance_Range (F-score: 166.2876, p-value: 1.4268e-36)
+  - GLCM_InverseDifferenceMoment_Range (F-score: 21.4477, p-value: 3.8760e-06)
+  - GLCM_MaximalCorrelationCoefficient_Range (F-score: 0.7172, p-value: 3.9718e-01)
+  - GLDS_Contrast (F-score: 14.2274, p-value: 1.6682e-04)
+  - LBP_R_1_P_8_energy (F-score: 268.7359, p-value: 1.1033e-56)
+  - Zernikes_Moments_radius_9_0 (F-score: 634.4765, p-value: 1.8782e-121)
+  - Zernikes_Moments_radius_9_1 (F-score: 221.2509, p-value: 1.7422e-47)
+  - Hu_Moment_0 (F-score: 719.4451, p-value: 3.5855e-135)
+  - TAS6 (F-score: 86.6564, p-value: 3.3596e-20)
+  - TAS28 (F-score: 54.0675, p-value: 2.8366e-13)
+  - TAS30 (F-score: 10.3189, p-value: 1.3382e-03)
+
+Final feature count: 13

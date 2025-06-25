@@ -1,0 +1,57 @@
+=== Model Performance Summary ===
+
+Timestamp: 2025-06-25 12:48:19
+
+MCC Score: 0.9509
+Accuracy: 0.9892
+AUC: 0.9992
+
+--- Classification Report ---
+              precision    recall  f1-score   support
+
+     non egg       0.99      0.99      0.99       570
+         egg       0.95      0.96      0.96        81
+
+    accuracy                           0.99       651
+   macro avg       0.97      0.98      0.98       651
+weighted avg       0.99      0.99      0.99       651
+
+--- Confusion Matrix ---
+[[566,   4],
+ [  3,  78]]
+
+Pipeline Steps:
+scaler: StandardScaler
+kbest: SelectKBest
+svc: SVC
+
+Final Model Parameters:
+memory: None
+steps: [('scaler', StandardScaler()), ('kbest', SelectKBest(k=13)), ('svc', SVC(C=np.float64(2.223), class_weight='balanced', probability=True,
+    random_state=42))]
+transform_input: None
+verbose: False
+scaler: StandardScaler()
+kbest: SelectKBest(k=13)
+svc: SVC(C=np.float64(2.223), class_weight='balanced', probability=True,
+    random_state=42)
+scaler__copy: True
+scaler__with_mean: True
+scaler__with_std: True
+kbest__k: 13
+kbest__score_func: <function f_classif at 0x000001F5192618A0>
+svc__C: 2.223
+svc__break_ties: False
+svc__cache_size: 200
+svc__class_weight: balanced
+svc__coef0: 0.0
+svc__decision_function_shape: ovr
+svc__degree: 3
+svc__gamma: scale
+svc__kernel: rbf
+svc__max_iter: -1
+svc__probability: True
+svc__random_state: 42
+svc__shrinking: True
+svc__tol: 0.001
+svc__verbose: False
