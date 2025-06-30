@@ -8,7 +8,7 @@ This repository supports our publication on automated classification of spotted 
 
 This project delivers:
 
-- Extraction of multiple complementary texture descriptors (GLCM, GLDS, LBP, Hu moments, Zernike moments, TAS) from grayscale images.
+- Extraction of multiple complementary texture descriptors (GLCM, GLDS, LBP, Hu moments, TAS) from grayscale images.
 - Feature selection and dimensionality reduction to identify a minimal, interpretable set.
 - An optimized SVM classifier trained with hyperparameter tuning.
 - Comprehensive evaluation and visualization of model performance.
